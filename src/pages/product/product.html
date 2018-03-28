@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Product List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list *ngFor="let prd of product">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="http://localhost/ioincapi/images/{{prd.p_images}}">
+      </ion-thumbnail>
+      <h2>{{prd.p_name}}</h2>
+      <p>{{prd.p_price}}</p>
+      <button ion-button item-end color="secondary" (click)="productDetail(prd.id)">View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

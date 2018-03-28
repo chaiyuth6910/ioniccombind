@@ -19,6 +19,11 @@ import { CoursePage } from '../pages/course/course';
 import { ServicePage } from '../pages/service/service';
 import { ArticlePage } from '../pages/article/article';
 import { ContactPage } from '../pages/contact/contact';
+import { ProductPage } from '../pages/product/product';
+
+/* Import สำหรับติดต่อ Web Service*/
+import { HttpClientModule } from '@angular/common/http'
+import { ProductdetailPage } from '../pages/productdetail/productdetail';
 
 @NgModule({
   declarations: [
@@ -32,11 +37,14 @@ import { ContactPage } from '../pages/contact/contact';
     CoursePage,
     ServicePage,
     ArticlePage,
-    ContactPage
+    ContactPage,
+    ProductPage,
+    ProductdetailPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,7 +58,9 @@ import { ContactPage } from '../pages/contact/contact';
     CoursePage,
     ServicePage,
     ArticlePage,
-    ContactPage
+    ContactPage,
+    ProductPage,
+    ProductdetailPage
   ],
   providers: [
     StatusBar,

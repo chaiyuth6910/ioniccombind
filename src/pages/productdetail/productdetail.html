@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Product Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let prd of pdetail">
+    <img src="http://localhost/ioincapi/images/{{prd.p_images}}">
+    <ion-card-content>
+      <ion-card-title>
+        {{prd.p_name}}
+      </ion-card-title>
+      <p>ราคา {{prd.p_price}} บาท</p>
+      <p>จำนวน {{prd.p_qty}} ชิ้น</p>
+      <p>สถานะ {{status[prd.p_status]}} </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
