@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>User List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list *ngFor="let ulist of userList" (click)="viewUserDetail(ulist.id)">
+        <ion-item-sliding>
+          <ion-item>
+            <h2>{{ulist.name}}</h2>
+            <p>{{ulist.email}}</p>
+            <p>{{ulist.address.street}}</p>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="primary">
+              <ion-icon name="text"></ion-icon>
+              Text
+            </button>
+            <button ion-button color="secondary" (click)="callNumber(ulist.phone)">
+              <ion-icon name="call"></ion-icon>
+              Call
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>User Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list >
+        <ion-item *ngFor="let udt of udetail">
+          <h2>{{udt.name}}</h2>
+          <p>{{udt.email}}</p>
+          <p>{{udt.username}}</p>
+          <p>{{udt.address.street}}</p>
+          <p>{{udt.address.suite}}</p>
+          <p>{{udt.address.city}}</p>
+          <p>{{udt.address.zipcode}}</p>
+        </ion-item>
+      </ion-list>
+
+</ion-content>

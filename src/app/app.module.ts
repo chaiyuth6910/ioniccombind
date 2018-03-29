@@ -24,6 +24,14 @@ import { ProductPage } from '../pages/product/product';
 /* Import สำหรับติดต่อ Web Service*/
 import { HttpClientModule } from '@angular/common/http'
 import { ProductdetailPage } from '../pages/productdetail/productdetail';
+import { JsononlinePage } from '../pages/jsononline/jsononline';
+import { UserdetailPage } from '../pages/userdetail/userdetail';
+import { CallNumber } from '@ionic-native/call-number';
+import { ViewmapPage } from '../pages/viewmap/viewmap';
+
+import { Geolocation } from '@ionic-native/geolocation';
+import { IonicStorageModule } from '@ionic/storage';
+import { ViewdataPage } from '../pages/viewdata/viewdata';
 
 @NgModule({
   declarations: [
@@ -39,12 +47,17 @@ import { ProductdetailPage } from '../pages/productdetail/productdetail';
     ArticlePage,
     ContactPage,
     ProductPage,
-    ProductdetailPage
+    ProductdetailPage,
+    JsononlinePage,
+    UserdetailPage,
+    ViewmapPage,
+    ViewdataPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    IonicStorageModule.forRoot(),
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,11 +73,17 @@ import { ProductdetailPage } from '../pages/productdetail/productdetail';
     ArticlePage,
     ContactPage,
     ProductPage,
-    ProductdetailPage
+    ProductdetailPage,
+    JsononlinePage,
+    UserdetailPage,
+    ViewmapPage,
+    ViewdataPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    CallNumber,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

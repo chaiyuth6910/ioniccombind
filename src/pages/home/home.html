@@ -1,57 +1,107 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
 
-    <button ion-button menuToggle class="menutg">
+  <ion-toolbar>
+
+    <button ion-button menuToggle="left" class="menutg" left>
       <ion-icon name="menu"></ion-icon>
     </button>
 
-  </ion-navbar>
+    <ion-title>Home</ion-title>
+
+    <ion-buttons right>
+        <button ion-button icon-only color="royal">
+            <ion-icon name="search"></ion-icon>
+        </button>
+        <button ion-button icon-only color="royal">
+            <ion-icon name="person-add"></ion-icon>
+        </button>
+        <button ion-button icon-only color="white">
+            <ion-icon name="more"></ion-icon>
+          </button>
+    </ion-buttons>
+
+    <button ion-button menuToggle="right" class="menutg" right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+  </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
   <div class="row b_top">
     <div class="b_top_content">
       <img src="assets/imgs/profile.jpg" alt="">
-      <div class="box-c-right">
+      <div class="box-c-right" style="color:#fff">
         <h2>สวัสดีตอนเช้า</h2>
-        <p>Samit Koyom</p>
+        <p>คุณสามิตร โกยม</p>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col box-cq" (click)="showProduct()">
       <ion-icon name="appstore"></ion-icon>
-      รายการสินค้า
+      JSON Local
     </div>
-    <div class="col box-cq">
-      <ion-icon name="compass" (click)="listUsername()"></ion-icon>
+    <div class="col box-cq" (click)="listUsername()">
+      <ion-icon name="compass"></ion-icon>
       JSON Online
     </div>
-    <div class="col box-cq">
-      <ion-icon name="sunny" (click)="listWeather()"></ion-icon>
+    <div class="col box-cq" (click)="listWeather()">
+      <ion-icon name="sunny"></ion-icon>
       XML Online
     </div>
   </div>
   <div class="row">
-    <div class="col box-cq">
-      <ion-icon name="barcode"></ion-icon>
-      Barcode Scan
+    <div class="col box-cq" (click)="viewMap()">
+      <ion-icon name="map"></ion-icon>
+      MAP
     </div>
-    <div class="col box-cq">Menu 5</div>
-    <div class="col box-cq">Menu 6</div>
+    <div class="col box-cq" (click)="showData()">
+      <ion-icon name="cube"></ion-icon>
+      Local Storage
+    </div>
+    <div class="col box-cq" (click)="viewChart()">
+      <ion-icon name="analytics"></ion-icon>
+      Chart
+    </div>
   </div>
 
-  <div class="row box-cf">
-    Menu 7
-  </div>
-  <div class="row box-cf">
-    Menu 8
+
+  <div class="row">
+    <div class="col box-cq" (click)="viewWebpage()">
+      <ion-icon name="browsers"></ion-icon>
+      InApp Browser
+    </div>
+    <div class="col box-cq" (click)="sendToServer()">
+      <ion-icon name="send"></ion-icon>
+      Post to Server
+    </div>
+    <div class="col box-cq" (click)="pushNotification()">
+      <ion-icon name="notifications"></ion-icon>
+      Push Notif
+    </div>
   </div>
 
   <div class="row">
-    <div class="col box-cq">Menu 9</div>
-    <div class="col box-cq">Menu 10</div>
-    <div class="col box-cq">Menu 11</div>
+    <div class="col box-cq" (click)="showCamer()">
+      <ion-icon name="camera"></ion-icon>
+      Camera
+    </div>
+    <div class="col box-cq" (click)="showBarcode()">
+      <ion-icon name="barcode"></ion-icon>
+      Barcode
+    </div>
+    <div class="col box-cq" (click)="showFirebase()">
+      <ion-icon name="cloud"></ion-icon>
+      Firebase
+    </div>
+  </div>
+
+  <div class="row box-cf">
+    MENU 13
+  </div>
+  <div class="row box-cf">
+    MENU 14
   </div>
 </ion-content>
