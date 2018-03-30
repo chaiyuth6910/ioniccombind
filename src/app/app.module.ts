@@ -32,6 +32,18 @@ import { ViewmapPage } from '../pages/viewmap/viewmap';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicStorageModule } from '@ionic/storage';
 import { ViewdataPage } from '../pages/viewdata/viewdata';
+import { IntroPage } from '../pages/intro/intro';
+
+
+/* Push Notification */
+import { FCM } from '@ionic-native/fcm';
+
+/* Chart */
+import { ViewchartPage } from '../pages/viewchart/viewchart';
+import { ViewwebpagePage } from '../pages/viewwebpage/viewwebpage';
+
+/* Inapp browser สำหร้บเปิดหน้าเว็บไซต์*/
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @NgModule({
   declarations: [
@@ -51,13 +63,16 @@ import { ViewdataPage } from '../pages/viewdata/viewdata';
     JsononlinePage,
     UserdetailPage,
     ViewmapPage,
-    ViewdataPage
+    ViewdataPage,
+    IntroPage,
+    ViewchartPage,
+    ViewwebpagePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    HttpClientModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -77,13 +92,18 @@ import { ViewdataPage } from '../pages/viewdata/viewdata';
     JsononlinePage,
     UserdetailPage,
     ViewmapPage,
-    ViewdataPage
+    ViewdataPage,
+    IntroPage,
+    ViewchartPage,
+    ViewwebpagePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     CallNumber,
     Geolocation,
+    InAppBrowser,
+    FCM,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

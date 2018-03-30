@@ -6,6 +6,8 @@ import { JsononlinePage } from '../jsononline/jsononline';
 import { App } from 'ionic-angular'
 import { ViewmapPage } from '../viewmap/viewmap';
 import { ViewdataPage } from '../viewdata/viewdata';
+import { ViewchartPage } from '../viewchart/viewchart';
+import { ViewwebpagePage } from '../viewwebpage/viewwebpage';
 
 @Component({
   selector: 'page-home',
@@ -41,6 +43,16 @@ export class HomePage {
   showData()
   {
     this.app.getRootNav().push(ViewdataPage);
+  }
+
+  viewChart()
+  {
+    this.app.getRootNav().push(ViewchartPage);
+  }
+
+  viewWebpage()
+  {
+    this.app.getRootNav().push(ViewwebpagePage);
   }
 
 } // end class
